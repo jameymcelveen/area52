@@ -1,0 +1,19 @@
+﻿@model Mvc4Testpad.Models.Questions
+
+@{
+    ViewBag.Title = "Questions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Questions</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+    @Html.DisplayTextFor(x => x.Question1)
+
+    @Html.EditorFor(x => x.Answer1)
+
+    <input type="submit" value="Submit"/>
+    </div>
+}
